@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { 
   Sparkles, 
   ChevronRight, 
-  Mail, 
   CheckCircle2, 
   ShieldCheck, 
   Feather, 
@@ -221,10 +221,12 @@ export default function AlvisLandingPage() {
               }`}
             >
               <div className="relative aspect-3/4 overflow-hidden bg-alvi-charcoal">
-                <img 
-                  src={item.image} 
+                <Image
+                  src={item.image}
                   alt={item.name}
-                  className="object-cover object-center w-full h-full group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-center group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute top-3 right-3 bg-alvi-navy/90 border border-alvi-gold/30 px-2.5 py-1 text-[10px] uppercase tracking-widest text-alvi-gold">
                   {item.category}
@@ -247,6 +249,7 @@ export default function AlvisLandingPage() {
                 <div className="pt-4 border-t border-alvi-gold/10 flex items-center justify-between">
                   <span className="text-xs tracking-widest text-alvi-ivory font-serif">{item.price}</span>
                   <button 
+                    type="button"
                     onClick={() => setSelectedProduct(item)}
                     className="text-[10px] uppercase tracking-widest text-alvi-gold hover:underline"
                   >
@@ -272,7 +275,7 @@ export default function AlvisLandingPage() {
               </h2>
             </div>
             <p className="text-xs text-gray-400 max-w-md tracking-wider leading-relaxed">
-              Additional visuals from the `public/more-products` folder, placed here as supporting brand shots and close-up craftsmanship details.
+              Additional visuals from the public more-products folder, placed here as supporting brand shots and close-up craftsmanship details.
             </p>
           </div>
 
@@ -280,10 +283,12 @@ export default function AlvisLandingPage() {
             {MORE_PRODUCTS.map((item) => (
               <div key={item.id} className="group border border-alvi-gold/20 bg-alvi-navy/40 overflow-hidden hover:border-alvi-gold/60 transition duration-300">
                 <div className="relative aspect-4/5 overflow-hidden bg-alvi-charcoal">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100"
                   />
                 </div>
                 <div className="p-6 space-y-2">
@@ -339,19 +344,37 @@ export default function AlvisLandingPage() {
 
       {/* --- PRODUCT QUICK VIEW MODAL --- */}
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-alvi-navy border border-alvi-gold/40 max-w-lg w-full p-6 relative space-y-4">
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          role="presentation"
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div
+            className="bg-alvi-navy border border-alvi-gold/40 max-w-lg w-full p-6 relative space-y-4"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="product-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button 
+              type="button"
               onClick={() => setSelectedProduct(null)}
+              aria-label="Close product details"
               className="absolute top-4 right-4 text-gray-400 hover:text-alvi-gold text-sm"
             >
               ✕
             </button>
-            <div className="aspect-video overflow-hidden bg-alvi-charcoal">
-              <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-cover" />
+            <div className="relative aspect-video overflow-hidden bg-alvi-charcoal">
+              <Image
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                fill
+                sizes="(min-width: 1024px) 42rem, 100vw"
+                className="object-cover"
+              />
             </div>
             <span className="text-[10px] uppercase tracking-widest text-alvi-gold">{selectedProduct.category}</span>
-            <h3 className="font-serif text-xl text-alvi-ivory">{selectedProduct.name}</h3>
+            <h3 id="product-modal-title" className="font-serif text-xl text-alvi-ivory">{selectedProduct.name}</h3>
             <p className="text-xs text-gray-300 leading-relaxed">{selectedProduct.tagline}</p>
             <div className="p-3 border border-alvi-gold/20 bg-alvi-gold/5 text-xs text-alvi-gold tracking-wider uppercase text-center">
               Available Upon Launch • {selectedProduct.price}
