@@ -103,26 +103,26 @@ export default function AlvisLandingPage() {
     <div className="min-h-screen bg-alvi-navy text-alvi-ivory font-sans antialiased selection:bg-alvi-gold selection:text-alvi-navy">
       
       {/* --- TOP BRAND BAR --- */}
-      <div className="bg-alvi-navy/90 border-b border-alvi-gold/20 backdrop-blur-md sticky top-0 z-50">
+      <div className="bg-alvi-navy/90 border-b border-white/20 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="font-serif text-2xl tracking-[0.25em] font-bold text-alvi-ivory">
               ALVI’S
             </span>
-            <span className="text-[9px] uppercase tracking-[0.35em] text-alvi-gold font-medium">
+            <span className="text-[9px] uppercase tracking-[0.35em] text-white/80 font-medium">
               Wear the Legacy
             </span>
           </div>
 
           <nav className="hidden md:flex space-x-8 text-xs tracking-[0.2em] uppercase text-gray-300">
-            <a href="#aesthetic" className="hover:text-alvi-gold transition">The Aesthetic</a>
-            <a href="#collection" className="hover:text-alvi-gold transition">Collection Preview</a>
-            <a href="#pillars" className="hover:text-alvi-gold transition">Philosophy</a>
+            <a href="#aesthetic" className="hover:text-white transition">The Aesthetic</a>
+            <a href="#collection" className="hover:text-white transition">Collection Preview</a>
+            <a href="#pillars" className="hover:text-white transition">Philosophy</a>
           </nav>
 
           <a 
             href="#vip-access"
-            className="px-5 py-2 text-xs uppercase tracking-[0.2em] border border-alvi-gold text-alvi-gold hover:bg-alvi-gold hover:text-alvi-navy transition font-medium"
+            className="px-5 py-2 text-xs uppercase tracking-[0.2em] border border-white/60 text-white hover:bg-white/10 hover:text-white transition font-medium"
           >
             VIP Waitlist
           </a>
@@ -132,17 +132,17 @@ export default function AlvisLandingPage() {
       {/* --- HERO SECTION --- */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-center px-6 overflow-hidden">
         {/* Subtle Background Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-alvi-gold/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-4xl mx-auto z-10 space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 border border-alvi-gold/30 bg-alvi-navy/60 backdrop-blur-sm text-alvi-gold text-xs tracking-[0.25em] uppercase rounded-full">
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 border border-white/30 bg-alvi-navy/60 backdrop-blur-sm text-white text-xs tracking-[0.25em] uppercase rounded-full">
             <Sparkles className="w-3.5 h-3.5" />
             <span>The Debut Collection • Launching Soon</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-wider leading-tight text-alvi-ivory">
             Old Money Elegance <br />
-            <span className="italic font-normal text-alvi-gold">For The Modern Era</span>
+            <span className="italic font-normal text-white">For The Modern Era</span>
           </h1>
 
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
@@ -159,18 +159,18 @@ export default function AlvisLandingPage() {
                   placeholder="Enter your email for private access"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-alvi-navy/80 border border-alvi-gold/30 text-alvi-ivory px-4 py-3 text-sm focus:outline-none focus:border-alvi-gold flex-1 placeholder:text-gray-500 placeholder:text-xs tracking-wider"
+                  className="bg-alvi-navy/80 border border-white/30 text-alvi-ivory px-4 py-3 text-sm focus:outline-none focus:border-white flex-1 placeholder:text-gray-500 placeholder:text-xs tracking-wider"
                 />
                 <button
                   type="submit"
-                  className="bg-alvi-gold hover:bg-alvi-goldHover text-alvi-navy font-semibold px-6 py-3 text-xs uppercase tracking-[0.2em] transition flex items-center justify-center gap-2"
+                  className="bg-white text-alvi-navy font-semibold px-6 py-3 text-xs uppercase tracking-[0.2em] transition flex items-center justify-center gap-2 hover:bg-white/90"
                 >
                   <span>Join List</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </form>
             ) : (
-              <div className="p-4 border border-alvi-gold/40 bg-alvi-gold/10 text-alvi-gold flex items-center justify-center gap-3">
+              <div className="p-4 border border-white/40 bg-white/10 text-white flex items-center justify-center gap-3">
                 <CheckCircle2 className="w-5 h-5" />
                 <span className="text-xs uppercase tracking-widest font-medium">
                   You are registered for private launch invitations.
@@ -185,12 +185,12 @@ export default function AlvisLandingPage() {
       </section>
 
       {/* --- BRAND MANIFESTO / BANNER --- */}
-      <section id="aesthetic" className="py-20 bg-alvi-charcoal/50 border-y border-alvi-gold/10">
+      <section id="aesthetic" className="py-20 bg-alvi-charcoal/50 border-y border-white/10">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-4">
           <blockquote className="font-serif text-2xl md:text-3xl italic text-alvi-ivory leading-relaxed">
             &ldquo;Old money never announces itself. The suit does not make the man; the man finds himself in the suit.&rdquo;
           </blockquote>
-          <p className="text-xs uppercase tracking-[0.3em] text-alvi-gold pt-2">
+          <p className="text-xs uppercase tracking-[0.3em] text-white/80 pt-2">
             — The Alvi’s Manifesto
           </p>
         </div>
@@ -200,10 +200,10 @@ export default function AlvisLandingPage() {
       <section id="collection" className="py-24 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-alvi-gold block mb-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-white/80 block mb-2">
               Curated Masterpieces
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif text-alvi-ivory">
+            <h2 className="text-3xl md:text-5xl font-serif text-white">
               Collection Preview
             </h2>
           </div>
@@ -216,7 +216,7 @@ export default function AlvisLandingPage() {
           {COLLECTION_PREVIEW.map((item) => (
             <div 
               key={item.id}
-              className={`group border border-alvi-gold/20 bg-alvi-navy/40 overflow-hidden hover:border-alvi-gold/60 transition duration-300 flex flex-col justify-between ${
+              className={`group border border-white/20 bg-alvi-navy/40 overflow-hidden hover:border-white/60 transition duration-300 flex flex-col justify-between ${
                 item.id === 5 ? "lg:col-span-2 lg:max-w-xl lg:mx-auto" : ""
               }`}
             >
@@ -228,17 +228,17 @@ export default function AlvisLandingPage() {
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover object-center group-hover:scale-105 transition duration-700 opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute top-3 right-3 bg-alvi-navy/90 border border-alvi-gold/30 px-2.5 py-1 text-[10px] uppercase tracking-widest text-alvi-gold">
+                <div className="absolute top-3 right-3 bg-alvi-navy/90 border border-white/30 px-2.5 py-1 text-[10px] uppercase tracking-widest text-white">
                   {item.category}
                 </div>
               </div>
 
               <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-alvi-gold/80 block">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/80 block">
                     {item.fabric}
                   </span>
-                  <h3 className="font-serif text-lg text-alvi-ivory group-hover:text-alvi-gold transition mt-1">
+                  <h3 className="font-serif text-lg text-alvi-ivory group-hover:text-white transition mt-1">
                     {item.name}
                   </h3>
                   <p className="text-xs text-gray-400 line-clamp-2 mt-2 leading-relaxed">
@@ -246,12 +246,12 @@ export default function AlvisLandingPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-alvi-gold/10 flex items-center justify-between">
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <span className="text-xs tracking-widest text-alvi-ivory font-serif">{item.price}</span>
                   <button 
                     type="button"
                     onClick={() => setSelectedProduct(item)}
-                    className="text-[10px] uppercase tracking-widest text-alvi-gold hover:underline"
+                    className="text-[10px] uppercase tracking-widest text-white hover:underline"
                   >
                     Details
                   </button>
@@ -263,11 +263,11 @@ export default function AlvisLandingPage() {
       </section>
 
       {/* --- MORE PRODUCTS / CRAFT DETAILS --- */}
-      <section className="py-24 bg-alvi-charcoal/20 border-y border-alvi-gold/10">
+      <section className="py-24 bg-alvi-charcoal/20 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-alvi-gold block mb-2">
+              <span className="text-xs uppercase tracking-[0.3em] text-white/80 block mb-2">
                 More Product Imagery
               </span>
               <h2 className="text-3xl md:text-5xl font-serif text-alvi-ivory">
@@ -281,7 +281,7 @@ export default function AlvisLandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {MORE_PRODUCTS.map((item) => (
-              <div key={item.id} className="group border border-alvi-gold/20 bg-alvi-navy/40 overflow-hidden hover:border-alvi-gold/60 transition duration-300">
+              <div key={item.id} className="group border border-white/20 bg-alvi-navy/40 overflow-hidden hover:border-white/60 transition duration-300">
                 <div className="relative aspect-4/5 overflow-hidden bg-alvi-charcoal">
                   <Image
                     src={item.image}
@@ -292,7 +292,7 @@ export default function AlvisLandingPage() {
                   />
                 </div>
                 <div className="p-6 space-y-2">
-                  <h3 className="font-serif text-lg text-alvi-ivory group-hover:text-alvi-gold transition">
+                  <h3 className="font-serif text-lg text-alvi-ivory group-hover:text-white transition">
                     {item.title}
                   </h3>
                   <p className="text-xs text-gray-400 leading-relaxed">
@@ -306,11 +306,11 @@ export default function AlvisLandingPage() {
       </section>
 
       {/* --- THREE PILLARS OF ALVI'S --- */}
-      <section id="pillars" className="py-20 bg-alvi-charcoal/30 border-t border-alvi-gold/10">
+      <section id="pillars" className="py-20 bg-alvi-charcoal/30 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
           
-          <div className="text-center space-y-3 p-6 border border-alvi-gold/10 bg-alvi-navy/30">
-            <div className="w-12 h-12 rounded-full border border-alvi-gold/30 flex items-center justify-center mx-auto text-alvi-gold">
+          <div className="text-center space-y-3 p-6 border border-white/10 bg-alvi-navy/30">
+            <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center mx-auto text-white">
               <Clock className="w-5 h-5" />
             </div>
             <h3 className="font-serif text-lg text-alvi-ivory">Timelessness Over Trends</h3>
@@ -319,8 +319,8 @@ export default function AlvisLandingPage() {
             </p>
           </div>
 
-          <div className="text-center space-y-3 p-6 border border-alvi-gold/10 bg-alvi-navy/30">
-            <div className="w-12 h-12 rounded-full border border-alvi-gold/30 flex items-center justify-center mx-auto text-alvi-gold">
+          <div className="text-center space-y-3 p-6 border border-white/10 bg-alvi-navy/30">
+            <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center mx-auto text-white">
               <Feather className="w-5 h-5" />
             </div>
             <h3 className="font-serif text-lg text-alvi-ivory">Craftsmanship Over Volume</h3>
@@ -329,8 +329,8 @@ export default function AlvisLandingPage() {
             </p>
           </div>
 
-          <div className="text-center space-y-3 p-6 border border-alvi-gold/10 bg-alvi-navy/30">
-            <div className="w-12 h-12 rounded-full border border-alvi-gold/30 flex items-center justify-center mx-auto text-alvi-gold">
+          <div className="text-center space-y-3 p-6 border border-white/10 bg-alvi-navy/30">
+            <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center mx-auto text-white">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <h3 className="font-serif text-lg text-alvi-ivory">Identity Over Impulse</h3>
@@ -350,7 +350,7 @@ export default function AlvisLandingPage() {
           onClick={() => setSelectedProduct(null)}
         >
           <div
-            className="bg-alvi-navy border border-alvi-gold/40 max-w-lg w-full p-6 relative space-y-4"
+            className="bg-alvi-navy border border-white/40 max-w-lg w-full p-6 relative space-y-4"
             role="dialog"
             aria-modal="true"
             aria-labelledby="product-modal-title"
@@ -360,7 +360,7 @@ export default function AlvisLandingPage() {
               type="button"
               onClick={() => setSelectedProduct(null)}
               aria-label="Close product details"
-              className="absolute top-4 right-4 text-gray-400 hover:text-alvi-gold text-sm"
+              className="absolute top-4 right-4 text-gray-400 hover:text-white text-sm"
             >
               ✕
             </button>
@@ -373,10 +373,10 @@ export default function AlvisLandingPage() {
                 className="object-cover"
               />
             </div>
-            <span className="text-[10px] uppercase tracking-widest text-alvi-gold">{selectedProduct.category}</span>
+            <span className="text-[10px] uppercase tracking-widest text-white">{selectedProduct.category}</span>
             <h3 id="product-modal-title" className="font-serif text-xl text-alvi-ivory">{selectedProduct.name}</h3>
             <p className="text-xs text-gray-300 leading-relaxed">{selectedProduct.tagline}</p>
-            <div className="p-3 border border-alvi-gold/20 bg-alvi-gold/5 text-xs text-alvi-gold tracking-wider uppercase text-center">
+            <div className="p-3 border border-white/20 bg-white/5 text-xs text-white tracking-wider uppercase text-center">
               Available Upon Launch • {selectedProduct.price}
             </div>
           </div>
@@ -384,17 +384,17 @@ export default function AlvisLandingPage() {
       )}
 
       {/* --- FOOTER --- */}
-      <footer className="border-t border-alvi-gold/20 py-12 bg-alvi-navy">
+      <footer className="border-t border-white/20 py-12 bg-alvi-navy">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h2 className="font-serif text-xl tracking-[0.2em] text-alvi-ivory">ALVI’S</h2>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-alvi-gold">Wear the Legacy</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/80">Wear the Legacy</p>
           </div>
 
           <div className="flex space-x-4 text-gray-400">
-            <a href="#" className="px-3 py-1 border border-alvi-gold/20 text-[10px] uppercase tracking-[0.25em] hover:text-alvi-gold hover:border-alvi-gold/50 transition">Instagram</a>
-            <a href="#" className="px-3 py-1 border border-alvi-gold/20 text-[10px] uppercase tracking-[0.25em] hover:text-alvi-gold hover:border-alvi-gold/50 transition">Facebook</a>
-            <a href="#" className="px-3 py-1 border border-alvi-gold/20 text-[10px] uppercase tracking-[0.25em] hover:text-alvi-gold hover:border-alvi-gold/50 transition">YouTube</a>
+            <a href="#" className="px-3 py-1 border border-white/20 text-[10px] uppercase tracking-[0.25em] hover:text-white hover:border-white/50 transition">Instagram</a>
+            <a href="#" className="px-3 py-1 border border-white/20 text-[10px] uppercase tracking-[0.25em] hover:text-white hover:border-white/50 transition">Facebook</a>
+            <a href="#" className="px-3 py-1 border border-white/20 text-[10px] uppercase tracking-[0.25em] hover:text-white hover:border-white/50 transition">YouTube</a>
           </div>
 
           <div className="text-center md:text-right text-[11px] text-gray-500 tracking-wider space-y-1">
