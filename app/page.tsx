@@ -20,7 +20,7 @@ const COLLECTION_PREVIEW = [
     fabric: "100% Super 150s Italian Wool",
     color: "Deep Navy",
     tagline: "Tailored to command authority without raising a voice.",
-    price: "PKR 48,000",
+    price: "PKR 34,999",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -30,7 +30,7 @@ const COLLECTION_PREVIEW = [
     fabric: "Midnight Velvet & Silk Lapels",
     color: "Charcoal & Gold Detail",
     tagline: "Designed for moments that require quiet magnificence.",
-    price: "PKR 55,000",
+    price: "PKR 29,999",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -40,7 +40,7 @@ const COLLECTION_PREVIEW = [
     fabric: "Handwoven Houndstooth Wool",
     color: "Rich Brown & Gold Accent",
     tagline: "An inheritance of class passed down through generations.",
-    price: "PKR 42,000",
+    price: "PKR 24,999",
     image: "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -50,7 +50,7 @@ const COLLECTION_PREVIEW = [
     fabric: "Breathable Irish Linen & Silk Blend",
     color: "Ivory White",
     tagline: "Subtle elegance for warm afternoons and garden soirees.",
-    price: "PKR 38,000",
+    price: "PKR 31,999",
     image: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -60,7 +60,7 @@ const COLLECTION_PREVIEW = [
     fabric: "Tailored Cotton Polo & Gurkha Trousers",
     color: "Stone Beige & Deep Navy",
     tagline: "Relaxed refinement for warm-weather dressing with a sharper silhouette.",
-    price: "PKR 29,000",
+    price: "PKR 15,999",
     image: "/more-products/product4.png",
   },
 ];
